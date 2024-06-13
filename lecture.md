@@ -295,6 +295,9 @@ $ ls -al diff/usr/local/bin/
 ## Основные команды Docker CLI
 
 ```shell
+# установка подсказок для командной строки
+docker completion fish > ~/.config/fish/completions/docker.fish
+
 # сборка образа ping в папке example/
 $ docker build examples/ -t my-ping:v1.0
 
