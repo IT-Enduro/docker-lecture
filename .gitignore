@@ -4,3 +4,6 @@
 *.iml
 *.iws
 *.ipr
+node_modules/
+.docusaurus/
+build/

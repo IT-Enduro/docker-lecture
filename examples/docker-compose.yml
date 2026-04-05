@@ -1,4 +1,4 @@
-version: "3.9"
+---
 services:
   postgres:
     image: postgres:15
@@ -13,7 +13,7 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - postgres:/var/lib/postgresql/data
       - ./postgres/:/docker-entrypoint-initdb.d/
     ports:
       - "5432:5432"
@@ -52,4 +52,4 @@ services:
         condition: service_healthy
 
 volumes:
-  db-data:
+  postgres:
